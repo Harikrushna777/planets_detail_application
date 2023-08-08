@@ -51,7 +51,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 "Planet Application",
                 style: GoogleFonts.robotoMono(
                   fontWeight: FontWeight.bold,
-                  fontSize: 22,
+                  fontSize: 28,
                   color: Colors.white,
                 ),
               ),
