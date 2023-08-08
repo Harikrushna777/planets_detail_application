@@ -76,15 +76,15 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               ),
             ),
             Transform.translate(
-              offset: Offset(-100, -200),
+              offset: const Offset(-100, -200),
               child: RotationTransition(
                 turns: Tween<double>(begin: 0.0, end: (pi * 2).toDouble())
                     .animate(rotationController2),
                 child: Container(
                   height: 300,
                   width: 300,
-                  alignment: Alignment(-1.4, 0),
-                  decoration: BoxDecoration(
+                  alignment: const Alignment(-1.4, 0),
+                  decoration: const BoxDecoration(
                     shape: BoxShape.circle,
                     color: Colors.transparent,
                   ),
@@ -105,15 +105,15 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               ),
             ),
             Transform.translate(
-              offset: Offset(-100, -200),
+              offset: const Offset(-100, -200),
               child: RotationTransition(
                 turns: Tween<double>(begin: 0.0, end: (pi * 2).toDouble())
                     .animate(rotationController2),
                 child: Container(
                   height: 300,
                   width: 300,
-                  alignment: Alignment(0.5, -2.1),
-                  decoration: BoxDecoration(
+                  alignment: const Alignment(0.5, -2.1),
+                  decoration: const BoxDecoration(
                     shape: BoxShape.circle,
                     color: Colors.transparent,
                   ),
@@ -134,15 +134,15 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               ),
             ),
             Transform.translate(
-              offset: Offset(-100, -200),
+              offset: const Offset(-100, -200),
               child: RotationTransition(
                 turns: Tween<double>(begin: 0.0, end: (pi * 2).toDouble())
                     .animate(rotationController),
                 child: Container(
                   height: 300,
                   width: 300,
-                  alignment: Alignment(-3.2, -0.5),
-                  decoration: BoxDecoration(
+                  alignment: const Alignment(-3.2, -0.5),
+                  decoration: const BoxDecoration(
                     shape: BoxShape.circle,
                     color: Colors.transparent,
                   ),
@@ -163,15 +163,15 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               ),
             ),
             Transform.translate(
-              offset: Offset(-100, -200),
+              offset: const Offset(-100, -200),
               child: RotationTransition(
                 turns: Tween<double>(begin: 0.0, end: (pi * 2).toDouble())
                     .animate(rotationController2),
                 child: Container(
                   height: 300,
                   width: 300,
-                  alignment: Alignment(-3.7, -1.9),
-                  decoration: BoxDecoration(
+                  alignment: const Alignment(-3.7, -1.9),
+                  decoration: const BoxDecoration(
                     shape: BoxShape.circle,
                     color: Colors.transparent,
                   ),
@@ -192,15 +192,15 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               ),
             ),
             Transform.translate(
-              offset: Offset(-100, -200),
+              offset: const Offset(-100, -200),
               child: RotationTransition(
                 turns: Tween<double>(begin: 0.0, end: (pi * 2).toDouble())
                     .animate(rotationController),
                 child: Container(
                   height: 300,
                   width: 300,
-                  alignment: Alignment(-5.15, 2),
-                  decoration: BoxDecoration(
+                  alignment: const Alignment(-5.15, 2),
+                  decoration: const BoxDecoration(
                     shape: BoxShape.circle,
                     color: Colors.transparent,
                   ),
@@ -221,15 +221,15 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               ),
             ),
             Transform.translate(
-              offset: Offset(-100, -200),
+              offset: const Offset(-100, -200),
               child: RotationTransition(
                 turns: Tween<double>(begin: 0.0, end: (pi * 2).toDouble())
                     .animate(rotationController2),
                 child: Container(
                   height: 300,
                   width: 300,
-                  alignment: Alignment(-2, -6.1),
-                  decoration: BoxDecoration(
+                  alignment: const Alignment(-2, -6.1),
+                  decoration: const BoxDecoration(
                     shape: BoxShape.circle,
                     color: Colors.transparent,
                   ),
