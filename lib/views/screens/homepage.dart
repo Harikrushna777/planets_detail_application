@@ -8,11 +8,11 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         image: DecorationImage(
           image: AssetImage('assets/images/space.jpg'),
           fit: BoxFit.cover,
@@ -30,7 +30,26 @@ class _HomePageState extends State<HomePage> {
           centerTitle: true,
           backgroundColor: Colors.transparent,
         ),
-        body: Center(),
+        body: Stack(
+          children: [
+            Transform.translate(
+              offset: Offset(-90, -190),
+              child: Container(
+                height: 300,
+                width: 300,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(
+                      'assets/images/sun1.png',
+                    ),
+                    fit: BoxFit.cover,
+                  ),
+                  shape: BoxShape.circle,
+                ),
+              ),
+            ),
+          ],
+        ),
         backgroundColor: Colors.transparent,
       ),
     );

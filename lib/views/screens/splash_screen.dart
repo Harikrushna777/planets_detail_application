@@ -14,7 +14,7 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   void mySplashScreen() {
     Timer.periodic(
-      const Duration(seconds: 5),
+      const Duration(seconds: 4),
       (tick) {
         Navigator.of(context).pushReplacementNamed(MyRoutes.home);
         tick.cancel();
@@ -44,6 +44,9 @@ class _SplashScreenState extends State<SplashScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              const SizedBox(
+                height: 300,
+              ),
               Text(
                 "Planet Application",
                 style: GoogleFonts.robotoMono(
@@ -52,7 +55,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   color: Colors.white,
                 ),
               ),
-              const SizedBox(height: 30),
+              const SizedBox(height: 130),
               Text(
                 "please wait...",
                 style: GoogleFonts.robotoMono(
@@ -61,7 +64,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   color: Colors.white,
                 ),
               ),
-              const SizedBox(height: 10),
+              const SizedBox(height: 20),
               const CircularProgressIndicator(
                 color: Colors.white,
               ),
