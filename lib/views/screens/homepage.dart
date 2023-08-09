@@ -11,7 +11,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
-  // late AnimationController animationController;
+  late AnimationController continueAnimation;
   late AnimationController rotationController;
   late AnimationController rotationController2;
 
@@ -19,20 +19,32 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   void initState() {
     super.initState();
 
+    continueAnimation = AnimationController(
+      vsync: this,
+      duration: const Duration(
+        minutes: 10,
+      ),
+    )..repeat();
+
     rotationController = AnimationController(
       vsync: this,
       duration: const Duration(
-        seconds: 120,
+        seconds: 270,
       ),
     )..repeat();
+
     rotationController2 = AnimationController(
       vsync: this,
       duration: const Duration(
-        seconds: 100,
+        seconds: 200,
       ),
     )..repeat();
+
     rotationController.repeat();
+
     rotationController2.repeat();
+
+    continueAnimation.repeat();
   }
 
   @override
@@ -59,22 +71,31 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
         body: Stack(
           alignment: Alignment.center,
           children: [
+            // Sun
+
             Transform.translate(
               offset: const Offset(-100, -200),
-              child: Container(
-                height: 300,
-                width: 300,
-                decoration: const BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage(
-                      'assets/images/sun1.png',
+              child: RotationTransition(
+                turns: Tween<double>(begin: 0.0, end: (pi * 2).toDouble())
+                    .animate(continueAnimation),
+                child: Container(
+                  height: 300,
+                  width: 300,
+                  decoration: const BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage(
+                        'assets/images/sun1.png',
+                      ),
+                      fit: BoxFit.cover,
                     ),
-                    fit: BoxFit.cover,
+                    shape: BoxShape.circle,
                   ),
-                  shape: BoxShape.circle,
                 ),
               ),
             ),
+
+            // Mercury
+
             Transform.translate(
               offset: const Offset(-100, -200),
               child: RotationTransition(
@@ -88,22 +109,29 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                     shape: BoxShape.circle,
                     color: Colors.transparent,
                   ),
-                  child: Container(
-                    height: 60,
-                    width: 60,
-                    decoration: const BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage(
-                          'assets/images/mercury1.png',
+                  child: RotationTransition(
+                    turns: Tween<double>(begin: 0.0, end: (pi * 2).toDouble())
+                        .animate(continueAnimation),
+                    child: Container(
+                      height: 60,
+                      width: 60,
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage(
+                            'assets/images/mercury1.png',
+                          ),
+                          fit: BoxFit.cover,
                         ),
-                        fit: BoxFit.cover,
+                        shape: BoxShape.circle,
                       ),
-                      shape: BoxShape.circle,
                     ),
                   ),
                 ),
               ),
             ),
+
+            // Venus
+
             Transform.translate(
               offset: const Offset(-100, -200),
               child: RotationTransition(
@@ -117,22 +145,29 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                     shape: BoxShape.circle,
                     color: Colors.transparent,
                   ),
-                  child: Container(
-                    height: 70,
-                    width: 70,
-                    decoration: const BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage(
-                          'assets/images/venus1.png',
+                  child: RotationTransition(
+                    turns: Tween<double>(begin: 0.0, end: (pi * 2).toDouble())
+                        .animate(continueAnimation),
+                    child: Container(
+                      height: 70,
+                      width: 70,
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage(
+                            'assets/images/venus1.png',
+                          ),
+                          fit: BoxFit.cover,
                         ),
-                        fit: BoxFit.cover,
+                        shape: BoxShape.circle,
                       ),
-                      shape: BoxShape.circle,
                     ),
                   ),
                 ),
               ),
             ),
+
+            // Earth
+
             Transform.translate(
               offset: const Offset(-100, -200),
               child: RotationTransition(
@@ -146,22 +181,29 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                     shape: BoxShape.circle,
                     color: Colors.transparent,
                   ),
-                  child: Container(
-                    height: 90,
-                    width: 90,
-                    decoration: const BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage(
-                          'assets/images/earth1.png',
+                  child: RotationTransition(
+                    turns: Tween<double>(begin: 0.0, end: (pi * 2).toDouble())
+                        .animate(continueAnimation),
+                    child: Container(
+                      height: 90,
+                      width: 90,
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage(
+                            'assets/images/earth1.png',
+                          ),
+                          fit: BoxFit.cover,
                         ),
-                        fit: BoxFit.cover,
+                        shape: BoxShape.circle,
                       ),
-                      shape: BoxShape.circle,
                     ),
                   ),
                 ),
               ),
             ),
+
+            // Mars
+
             Transform.translate(
               offset: const Offset(-100, -200),
               child: RotationTransition(
@@ -175,22 +217,29 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                     shape: BoxShape.circle,
                     color: Colors.transparent,
                   ),
-                  child: Container(
-                    height: 70,
-                    width: 70,
-                    decoration: const BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage(
-                          'assets/images/mars1.png',
+                  child: RotationTransition(
+                    turns: Tween<double>(begin: 0.0, end: (pi * 2).toDouble())
+                        .animate(continueAnimation),
+                    child: Container(
+                      height: 70,
+                      width: 70,
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage(
+                            'assets/images/mars1.png',
+                          ),
+                          fit: BoxFit.cover,
                         ),
-                        fit: BoxFit.cover,
+                        shape: BoxShape.circle,
                       ),
-                      shape: BoxShape.circle,
                     ),
                   ),
                 ),
               ),
             ),
+
+            // Jupiter
+
             Transform.translate(
               offset: const Offset(-100, -200),
               child: RotationTransition(
@@ -199,27 +248,34 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                 child: Container(
                   height: 300,
                   width: 300,
-                  alignment: const Alignment(-5.15, 2),
+                  alignment: const Alignment(-5.2, 2),
                   decoration: const BoxDecoration(
                     shape: BoxShape.circle,
                     color: Colors.transparent,
                   ),
-                  child: Container(
-                    height: 100,
-                    width: 100,
-                    decoration: const BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage(
-                          'assets/images/jupiter1.png',
+                  child: RotationTransition(
+                    turns: Tween<double>(begin: 0.0, end: (pi * 2).toDouble())
+                        .animate(continueAnimation),
+                    child: Container(
+                      height: 100,
+                      width: 100,
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage(
+                            'assets/images/jupiter1.png',
+                          ),
+                          fit: BoxFit.cover,
                         ),
-                        fit: BoxFit.cover,
+                        shape: BoxShape.circle,
                       ),
-                      shape: BoxShape.circle,
                     ),
                   ),
                 ),
               ),
             ),
+
+            // Saturn
+
             Transform.translate(
               offset: const Offset(-100, -200),
               child: RotationTransition(
@@ -228,22 +284,26 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                 child: Container(
                   height: 300,
                   width: 300,
-                  alignment: const Alignment(-2, -6.1),
+                  alignment: const Alignment(-2, -6.3),
                   decoration: const BoxDecoration(
                     shape: BoxShape.circle,
                     color: Colors.transparent,
                   ),
-                  child: Container(
-                    height: 100,
-                    width: 100,
-                    decoration: const BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage(
-                          'assets/images/saturn1.png',
+                  child: RotationTransition(
+                    turns: Tween<double>(begin: 0.0, end: (pi * 2).toDouble())
+                        .animate(continueAnimation),
+                    child: Container(
+                      height: 100,
+                      width: 100,
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage(
+                            'assets/images/saturn1.png',
+                          ),
+                          fit: BoxFit.cover,
                         ),
-                        fit: BoxFit.cover,
+                        shape: BoxShape.circle,
                       ),
-                      shape: BoxShape.circle,
                     ),
                   ),
                 ),
