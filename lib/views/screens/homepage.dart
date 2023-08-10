@@ -331,24 +331,40 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               ),
             ),
             const SizedBox(
-              height: 400,
+              height: 320,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: Text(
+                "If you know more then you will press on know more button",
+                style: GoogleFonts.robotoMono(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18,
+                  color: Colors.white,
+                  letterSpacing: -1.5,
+                ),
+                textAlign: TextAlign.center,
+              ),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.of(context).pushNamed(MyRoutes.detail_page);
-                  },
-                  child: Padding(
-                    padding: const EdgeInsets.all(10),
-                    child: Text(
-                      "Know More",
-                      style: GoogleFonts.robotoMono(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 18,
-                        color: Colors.black,
+                Padding(
+                  padding: const EdgeInsets.all(10),
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.of(context).pushNamed(MyRoutes.detail_page);
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.all(12),
+                      child: Text(
+                        "Know More",
+                        style: GoogleFonts.robotoMono(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                          color: Colors.black,
+                        ),
                       ),
                     ),
                   ),
