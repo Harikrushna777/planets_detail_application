@@ -1,6 +1,6 @@
-# Project Definition: Galaxy Planets (Animator)
+# Project Definition:- Galaxy Planets (Animator)
 
-# Project Description:
+# Project Description:-
 "Galaxy Planets (Animator)" is an exciting mobile application built using Flutter, focusing on
 creating captivating animations. The app incorporates concepts such as Implicit Animation and
 Explicit Animation, along with additional features like Shared Preferences and Local JSON
@@ -12,7 +12,7 @@ Shared Preferences, a Local JSON Bank, fetching planet details, saving favorites
 themes, a splash screen, and detailed planet screens, the app offers a comprehensive solution for
 users to explore the wonders of the galaxy through captivating animations.
 
-# Project Objectives:
+# Project Objectives:-
 
 Implicit Animation: The app utilizes Implicit Animation techniques to create smooth and
 visually appealing animations. Implicit animations are seamlessly integrated into various UI
@@ -26,26 +26,35 @@ Users can save specific planet details as favorites, and this information is sto
 Shared Preferences. The app provides a dedicated page where users can view their favorite
 planets, offering quick access to their preferred celestial bodies.
 
- # Project Technologies:
+ # Project Technologies:-
 - Dart language
 - Flutter framework with MVC and Provider architecture
 
-# Project Requirements:
+# Project Requirements:-
 - Knowledge of programming languages such as Dart and JavaScript.
 - Familiarity with the Flutter framework, Shared Preferences, and JSON parsing.
 - Understanding of user interface design principles and best practices.
 - Experience with mobile app development and related tools like Android Studio or VS Code.
 - Ability to work independently.
 
-# Project Deliverables:
+# Project Deliverables:-
 - A functional Animator application developed using Flutter.
 - Source code and documentation for the application.
 - User manual and installation instructions.
 - Project report detailing the development process, challenges faced, and solutions implemented.
 - Presentation and demonstration of the application to a panel of reviewers.
 
-# Project Evaluation:
+# Project Evaluation:-
 - User satisfaction with the application’s functionality and UI/UX
 - Quality of code and project structure
 - Presentation quality and clarity of communication
+
+# Images :- 
+<img src="https://github.com/Harikrushna777/planets_detail_application/assets/131134705/471656f5-be54-4b9a-8ce7-dfdf50236392" height="400"></img>
+<img src="" height="400"></img>
+<img src="" height="400"></img>
+<img src="" height="400"></img>
+<img src="" height="400"></img>
+<img src="" height="400"></img>
+<img src="" height="400"></img>
 
