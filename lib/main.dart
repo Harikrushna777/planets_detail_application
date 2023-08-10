@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       routes: {
         MyRoutes.home: (context) => const HomePage(),
         MyRoutes.splash_screen: (context) => const SplashScreen(),
-        MyRoutes.detailpage: (context) => const DetailPage(),
+        MyRoutes.detail_page: (context) => const DetailPage(),
       },
       theme: ThemeData(
         useMaterial3: true,

@@ -48,7 +48,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 height: 300,
               ),
               Text(
-                "Planet Application",
+                "Galaxy Planets",
                 style: GoogleFonts.robotoMono(
                   fontWeight: FontWeight.bold,
                   fontSize: 28,
@@ -57,14 +57,14 @@ class _SplashScreenState extends State<SplashScreen> {
               ),
               const SizedBox(height: 130),
               Text(
-                "please wait...",
+                "Please Wait...",
                 style: GoogleFonts.robotoMono(
                   fontWeight: FontWeight.bold,
                   fontSize: 22,
                   color: Colors.white,
                 ),
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 40),
               const CircularProgressIndicator(
                 color: Colors.white,
               ),

@@ -16,23 +16,27 @@ class _DetailPageState extends State<DetailPage> {
       width: double.infinity,
       decoration: const BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('assets/images/space.png'),
+          image: AssetImage('assets/images/space.jpg'),
           fit: BoxFit.cover,
         ),
       ),
       child: Scaffold(
         appBar: AppBar(
           title: Text(
-            "Planets Details",
+            "Planets",
             style: GoogleFonts.robotoMono(
               fontWeight: FontWeight.bold,
-              fontSize: 28,
               color: Colors.white,
+              letterSpacing: -1.5,
             ),
           ),
+          foregroundColor: Colors.white,
+          backgroundColor: Colors.transparent,
           centerTitle: true,
         ),
-        body: const Center(),
+        body: const Padding(
+          padding: EdgeInsets.all(18),
+        ),
         backgroundColor: Colors.transparent,
       ),
     );
