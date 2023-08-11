@@ -51,10 +51,10 @@ planets, offering quick access to their preferred celestial bodies.
 
 # Images :- 
 <img src="https://github.com/Harikrushna777/planets_detail_application/assets/131134705/471656f5-be54-4b9a-8ce7-dfdf50236392" height="400"></img>
-<img src="" height="400"></img>
-<img src="" height="400"></img>
-<img src="" height="400"></img>
-<img src="" height="400"></img>
-<img src="" height="400"></img>
-<img src="" height="400"></img>
+<img src="https://github.com/Harikrushna777/planets_detail_application/assets/131134705/24a75dea-7ae7-49d2-a161-67809ac862b3" height="400"></img>
+<img src="https://github.com/Harikrushna777/planets_detail_application/assets/131134705/04cca28c-107e-42e4-8691-e08cf3930e95" height="400"></img>
+<img src="https://github.com/Harikrushna777/planets_detail_application/assets/131134705/b87c707a-73c2-4bae-b9bb-ee3f72d76c54" height="400"></img>
+<img src="https://github.com/Harikrushna777/planets_detail_application/assets/131134705/e763e9eb-239f-49b3-a859-10b35753a19f" height="400"></img>
+<img src="https://github.com/Harikrushna777/planets_detail_application/assets/131134705/99abc8f6-938a-4f53-a65b-6d73412bb76f" height="400"></img>
+<img src="https://github.com/Harikrushna777/planets_detail_application/assets/131134705/f6d07fb5-cf61-4e81-be9b-bf6643560ee1" height="400"></img>
 
