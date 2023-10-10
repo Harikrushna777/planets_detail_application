@@ -38,7 +38,7 @@ class _DetailPageState extends State<DetailPage>
       width: double.infinity,
       decoration: const BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('assets/images/space.jpg'),
+          image: NetworkImage('assets/images/space.jpg'),
           fit: BoxFit.cover,
         ),
       ),
@@ -56,145 +56,160 @@ class _DetailPageState extends State<DetailPage>
           backgroundColor: Colors.transparent,
           centerTitle: true,
         ),
-        body: Padding(
-          padding: const EdgeInsets.all(18),
-          child: Consumer<JsonProvider>(
-            builder: (context, pro, child) {
-              return pro.allPlanets.isNotEmpty
-                  ? GridView.builder(
-                      gridDelegate:
-                          const SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 2,
-                        mainAxisSpacing: 120,
-                        crossAxisSpacing: 20,
-                        childAspectRatio: 2 / 3,
-                      ),
-                      scrollDirection: Axis.vertical,
-                      itemCount: pro.allPlanets.length,
-                      itemBuilder: (context, index) {
-                        PlanetModal data = pro.allPlanets[index];
-                        return GestureDetector(
-                          onTap: () {
-                            Navigator.of(context).pushNamed(
-                              MyRoutes.planet_detail,
-                              arguments: index,
-                            );
-                          },
-                          child: Stack(
-                            alignment: Alignment.center,
-                            children: [
-                              Container(
-                                height: double.infinity,
-                                width: double.infinity,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(20),
-                                  color: Colors.black,
-                                ),
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.end,
-                                  children: [
-                                    Text(
-                                      "Position : ${data.position}",
-                                      style: GoogleFonts.robotoMono(
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.white,
-                                        fontSize: 18,
-                                        letterSpacing: -1,
-                                      ),
-                                      textAlign: TextAlign.center,
-                                    ),
-                                    SizedBox(
-                                      height: 5,
-                                    ),
-                                    Text(
-                                      "Name : ${data.name}",
-                                      style: GoogleFonts.robotoMono(
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.white,
-                                        fontSize: 18,
-                                        letterSpacing: -1,
-                                      ),
-                                      textAlign: TextAlign.center,
-                                    ),
-                                    SizedBox(
-                                      height: 5,
-                                    ),
-                                    Text(
-                                      "Velocity : ${data.velocity}",
-                                      style: GoogleFonts.robotoMono(
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.white,
-                                        fontSize: 18,
-                                        letterSpacing: -1,
-                                      ),
-                                      textAlign: TextAlign.center,
-                                    ),
-                                    SizedBox(
-                                      height: 5,
-                                    ),
-                                    Text(
-                                      "Distance : ${data.distance}",
-                                      style: GoogleFonts.robotoMono(
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.white,
-                                        fontSize: 18,
-                                        letterSpacing: -1,
-                                      ),
-                                      textAlign: TextAlign.center,
-                                    ),
-                                    SizedBox(
-                                      height: 10,
-                                    ),
-                                  ],
-                                ),
+        body: Stack(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(18),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Consumer<JsonProvider>(
+                    builder: (context, pro, child) {
+                      return pro.allPlanets.isNotEmpty
+                          ? GridView.builder(
+                              gridDelegate:
+                                  const SliverGridDelegateWithFixedCrossAxisCount(
+                                crossAxisCount: 2,
+                                mainAxisSpacing: 120,
+                                crossAxisSpacing: 20,
+                                childAspectRatio: 2 / 3,
                               ),
-                              Transform.translate(
-                                offset: Offset(0, -130),
-                                child: RotationTransition(
-                                  turns: Tween<double>(
-                                          begin: 0.0, end: (pi * 2).toDouble())
-                                      .animate(continueAnimation),
-                                  child: Container(
-                                    height: 180,
-                                    width: 180,
-                                    decoration: BoxDecoration(
-                                      image: DecorationImage(
-                                        image: NetworkImage(data.image),
-                                        fit: BoxFit.cover,
+                              scrollDirection: Axis.vertical,
+                              itemCount: pro.allPlanets.length,
+                              itemBuilder: (context, index) {
+                                PlanetModal data = pro.allPlanets[index];
+                                return GestureDetector(
+                                  onTap: () {
+                                    Navigator.of(context).pushNamed(
+                                      MyRoutes.planet_detail,
+                                      arguments: index,
+                                    );
+                                  },
+                                  child: Stack(
+                                    alignment: Alignment.center,
+                                    children: [
+                                      SizedBox(
+                                        height: 60,
                                       ),
+                                      Container(
+                                        height: double.infinity,
+                                        width: double.infinity,
+                                        decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(20),
+                                          color: Colors.black,
+                                        ),
+                                        child: Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.end,
+                                          children: [
+                                            Text(
+                                              "Position : ${data.position}",
+                                              style: GoogleFonts.robotoMono(
+                                                fontWeight: FontWeight.bold,
+                                                color: Colors.white,
+                                                fontSize: 18,
+                                                letterSpacing: -1,
+                                              ),
+                                              textAlign: TextAlign.center,
+                                            ),
+                                            const SizedBox(
+                                              height: 5,
+                                            ),
+                                            Text(
+                                              "Name : ${data.name}",
+                                              style: GoogleFonts.robotoMono(
+                                                fontWeight: FontWeight.bold,
+                                                color: Colors.white,
+                                                fontSize: 18,
+                                                letterSpacing: -1,
+                                              ),
+                                              textAlign: TextAlign.center,
+                                            ),
+                                            const SizedBox(
+                                              height: 5,
+                                            ),
+                                            Text(
+                                              "Velocity : ${data.velocity}",
+                                              style: GoogleFonts.robotoMono(
+                                                fontWeight: FontWeight.bold,
+                                                color: Colors.white,
+                                                fontSize: 18,
+                                                letterSpacing: -1,
+                                              ),
+                                              textAlign: TextAlign.center,
+                                            ),
+                                            const SizedBox(
+                                              height: 5,
+                                            ),
+                                            Text(
+                                              "Distance : ${data.distance}",
+                                              style: GoogleFonts.robotoMono(
+                                                fontWeight: FontWeight.bold,
+                                                color: Colors.white,
+                                                fontSize: 18,
+                                                letterSpacing: -1,
+                                              ),
+                                              textAlign: TextAlign.center,
+                                            ),
+                                            const SizedBox(
+                                              height: 10,
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                      Transform.translate(
+                                        offset: const Offset(0, -130),
+                                        child: RotationTransition(
+                                          turns: Tween<double>(
+                                                  begin: 0.0,
+                                                  end: (pi * 2).toDouble())
+                                              .animate(continueAnimation),
+                                          child: Container(
+                                            height: 180,
+                                            width: 180,
+                                            decoration: BoxDecoration(
+                                              image: DecorationImage(
+                                                image: NetworkImage(data.image),
+                                                fit: BoxFit.cover,
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                );
+                              },
+                            )
+                          : Center(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    "Please Wait...",
+                                    style: GoogleFonts.robotoMono(
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white,
+                                      fontSize: 18,
+                                      letterSpacing: -1,
                                     ),
                                   ),
-                                ),
+                                  const SizedBox(
+                                    height: 40,
+                                  ),
+                                  const CircularProgressIndicator(
+                                    color: Colors.white,
+                                  ),
+                                ],
                               ),
-                            ],
-                          ),
-                        );
-                      },
-                    )
-                  : Center(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "Please Wait...",
-                            style: GoogleFonts.robotoMono(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white,
-                              fontSize: 18,
-                              letterSpacing: -1,
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 40,
-                          ),
-                          const CircularProgressIndicator(
-                            color: Colors.white,
-                          ),
-                        ],
-                      ),
-                    );
-            },
-          ),
+                            );
+                    },
+                  ),
+                ],
+              ),
+            ),
+          ],
         ),
         backgroundColor: Colors.transparent,
       ),
